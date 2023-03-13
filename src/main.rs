@@ -1,11 +1,12 @@
 mod contentlib;
+use contentlib::sayversion;
 
 fn main() {
     let file_name = std::env::args().nth(1).expect("file name not passed");
 
     let file = std::fs::read_to_string(file_name).expect("unable to read file");
 
-    println!("{}", contentlib::sayversion());
+    println!("{}", sayversion::sayversion());
 
     file.lines().for_each(|line| {
         if let Ok(value) = line.parse::<usize>() {
