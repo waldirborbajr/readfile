@@ -1,4 +1,6 @@
 mod contentlib;
+
+
 use contentlib::sayversion;
 
 pub trait MyTrait {
@@ -18,6 +20,8 @@ fn main() {
     let file = std::fs::read_to_string(file_name).expect("unable to read file");
 
     let my_stru = MyStruct {};
+
+
 
     println!(" sum = {}", my_stru.sum());
 
